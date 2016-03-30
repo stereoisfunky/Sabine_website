@@ -1,0 +1,418 @@
+/*
+Theme Name: StanleyWP
+Theme URI: http://gentsthemes.com
+Description: Responsive WordPress theme with all the Twitter Bootstrap elements and features.
+
+Author: Brad Williams & Carlos Alvarez & Carlos Alvarez
+Author URI: http://gentsthemes.com
+Version: 3.0.3
+Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, bootstrap, twitter
+
+Copyright (C) 2011-2014 Gents Themes
+License: GNU General Public License, version 3 (GPLv3)
+License URI: license.txt
+	
+CREATE CHILD THEME.
+See: http://codex.wordpress.org/Child_Themes
+	
+CSS Rules: Sorted alphabetically for better organization.
+*/
+
+/* Add my personal font */
+
+html {
+  position: relative;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+body {
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	background-color: #ffffff;
+	color: #777;
+	font-family: 'Futura', sans-serif;
+	text-align: justify;
+	font-size: 16px;
+	font-weight: 100;
+	margin-bottom: 10px;
+	z-index: 1;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 { color: #00aa86; font-family: 'Futura', sans-serif; font-weight: 10; }
+
+h1 { font-size: 35px; margin-bottom: 30px; margin-top: 30px; }
+
+/*.author-avatar img { -webkit-border-radius: 95px; -moz-border-radius: 95px; border-radius: 95px; }*/
+
+
+/* Paragraph & Typographic */
+p { font-size: 16px; line-height: 1.5; margin-bottom: 25px; text-align: justify;}
+
+.centered { text-align: center; }
+
+/* Links */
+a {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	color: #1abc9c;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+	word-wrap: break-word;
+}
+
+a:hover,
+a:focus { color: #00f7c2; outline: 0; text-decoration: none; }
+
+a:before,
+a:after {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/*hr {
+	border: 0;
+	border-top: 1px solid #ccc;
+	display: block;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0;
+}
+*/
+
+.navbar { margin-bottom: 0px; text-transform: uppercase; width: 100%;}
+
+.navbar-inverse { padding-bottom: 8px; padding-top: 8px; }
+
+/*background color of the nav bar*/
+.navbar-inverse { background-color: #ffffff; border: 0px;}
+
+/*color of nav elements e.g tabs*/
+.navbar-inverse .navbar-nav > li > a { color: #939598; }
+
+.navbar-inverse .navbar-nav > li > a:hover { color: #00f7c2; }
+
+.navbar-brand { font-size: 18px; font-weight: 10; letter-spacing: 2px; }
+
+.navbar-inverse .navbar-brand { color: white; }
+
+.navbar-inverse .navbar-toggle { border: 0px; }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover { background-color: transparent; color: #00aa86; }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { background-color: transparent; color: #00aa86; }
+
+/* Color of Sabine Zoltnere name in the banner */
+#logo span {
+ padding-left: 5px;
+ color: #00aa86;
+ text-transform: uppercase; 
+}
+
+/* progress bar skills */
+.progress-bar-theme { background-color: #d3d3d3; }
+
+
+/* Button to go up reading*/
+.topbutton {
+	height:64px;
+	width:64px;
+	position:fixed;
+	right:25px;
+	bottom:25px;
+	z-index:1;
+	background-image: url("http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png");
+	background-repeat:no-repeat;
+	display:none;
+}
+
+/* ================== BURGER MENU ANIMATION ================== */
+
+.navbar-toggle {
+  border: 0px;
+  background: transparent !important;
+}
+.navbar-toggle:hover {
+  background: transparent !important;
+}
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+    background-color: #939598 !important;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* ================== - ================== */
+
+/* Helpers */
+
+.mt { margin-bottom: 40px; margin-top: 40px; }
+
+.pt { padding-bottom: 50px; padding-top: 50px; max-width: 100%;}
+
+/* +++++ WRAP SECTIONS +++++ */
+
+#ww { background-color: #ffffff; padding-bottom: 10px; padding-top: 80px; max-width: 100%;}
+
+#footer p { color: white; }
+
+#footer h4 { 
+	color: white; 
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+
+}
+
+#footer{
+	background-color: #00aa86;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+  	/* Set the fixed height of the footer here */
+  	height: 100px;
+}
+
+/* Footer links */
+
+.footer-links{
+	font-size:14px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-links a{
+	padding-top: 20px;
+	display:inline-block;
+	text-decoration: none;
+	color:  inherit;
+}
+
+/* +++++ Color Wraps / Blog Page +++++ */
+
+#grey { background-color: #f2f2f2; padding-bottom: 60px; padding-top: 60px; }
+
+#white { background-color: #ffffff; padding-bottom: 60px; padding-top: 60px; }
+
+
+
+/* Blog Date*/
+bd {
+	color: #d2d2d2;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* Blog Author*/
+ba { font-size: 12px; padding-left: 5px; text-transform: uppercase; }
+
+/* Blog Quote */
+.bq { font-size: 22px; padding-top: 30px; }
+
+/* Blog Tags */
+bt { font-size: 12px; }
+
+/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
+/* Effects also are controled by hover.zoom.js */
+.zoom { 
+    display:block; 
+    position:relative; 
+    overflow:hidden; 
+    background:transparent url(images/loader.gif) no-repeat center;
+}
+
+
+.zoomOverlay {
+    position:absolute;
+    top:0; left:0;
+    bottom:0; right:0;
+    display:none;
+    background-image:url(images/zoom.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.zoom2 {
+	opacity: 1;
+}
+
+.zoom2:hover {
+	opacity: 0.7;
+}
+
+/* glyphicon Configuration */
+
+.glyphicon { color:  #ffff1a; font-size: 40px; }
+
+/* WP User Avatar */
+
+.wp-user-avatar {margin: 0;}
+
+
+/* LANDING PAGE STYLING */
+
+.fullscreen-landing {
+	z-index: 10000;
+	background-image: url('http://localhost:8888/Wordpress/wp-content/uploads/2016/03/AtmosphereWeb2-2.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+
+}
+
+.fullscreen-landing img{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.portfolio-thumbnail {
+	padding: 10px 10px 10px 10px;
+}
+
+.full-width-fixed {
+	width: 100%;
+	margin-top: 71px;
+}
+
+/* 11 Columns width and centered - Single Portfolio */
+.col-centered{
+float: none;
+margin: 0 auto;
+}
+
+#prev_project, #next_project{	
+ font-size: 14px;
+ color: #939598;
+}
+
+#prev_project:hover, #next_project:hover{	
+ color: #00f7c2;
+}
+
+
+
+/* ================== CONCATC PAGE CSS ================== */
+.contacts p{
+	font-size:20px;
+	display:inline-block;
+	text-align: center !important;
+}
+
+
+/* ================== ABOUT ME PAGE CSS ================== */
+
+#about-me-downloads a {
+    display:inline-block; 
+
+}
+#about-me-downloads{
+    text-align:center;
+}
+
+/* ================== BLOG NAV CATEGORIES ================== */
+.cat-item {
+	font-size: 20px;
+	text-align: center;
+	height: 40px;
+	display: inline-block;
+	letter-spacing: 1px;
+}
+
+.categories {
+	position:fixed;
+	margin-top: 24px;
+	width:100%;
+	z-index: 200;
+	background-color: #ffffff;
+} 
+
+.container-post {
+ z-index: 100;
+ padding-bottom: 60px;
+ max-width: 80%;
+}
+
+/* --------------------------------- */
+/* Adjustment for the mobile version */
+/* --------------------------------- */
+
+
+/* Extra small devices (phones, less than 768px) */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+
+	h1, h2, h3, h4, h5, h6 {
+    	font-size: 0.98em;
+	} 
+	/* items from the navigation are getting bigger and centered */
+	.menu-item a{
+		background-color: #f2f2f2 !important;
+		font-size: 20px;
+		text-align: center;
+		height: 40px;
+	}
+	#menu-main-menu {
+		background-color:#f2f2f2;
+		height:100%;
+	}
+	/* logo has padding as much as the hamburger menu */
+	#logo {
+		padding-left: 25px;
+	}
+
+	#prev_project, #next_project{
+		display: none;
+	}
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
