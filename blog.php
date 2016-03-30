@@ -45,7 +45,6 @@
   <?php if (have_posts()) : ?>
 <div class="row">
 </div>
-
   <?php while (have_posts()) : the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <div class="container-post col-centered">
@@ -73,7 +72,6 @@
          </div>
        </div>
            <?php endif; ?>
-
          <?php else : ?>
          <article id="post-not-found" class="hentry clearfix">
           <div class="container">
@@ -93,7 +91,6 @@
          </div>
        </div>
        </article>
-
      <?php endif; ?>  
 
 
