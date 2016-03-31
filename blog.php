@@ -27,12 +27,12 @@
   } else {
     $paged = 1;
   }
+
   query_posts( array( 'post_type' => 'post', 'paged' => $paged ) );
   ?>   
   
   <!-- SHOW THE CATEGORIES (YEAR), NEEDED FOR THE FILTERING OF ALL THE POST ACCORDING WITH THE TIME -->   
 
-  <div class="blog_nav_categories centered mt">
     <ul>
     <?php wp_list_categories( array(
         'order' => 'DESC',
@@ -40,60 +40,57 @@
         'title_li' => " ", 
         ) ); ?> 
     </ul>
-  </div>
 
-  <?php if (have_posts()) : ?>
-<div class="row">
-</div>
+
+
+<?php if (have_posts()) : ?>
+<div class="container_posts col-xs-12">
   <?php while (have_posts()) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <div class="container-post col-centered">
-            <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
+          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <div class="row col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin:0px">
+                <div class="col-lg-12 col-centered ">
                   <?php the_content(); ?>
-              </div>
-            </div><!-- /row -->
-          </div> <!-- /container -->
-        </div> 
-      </article><!-- end of #post-<?php the_ID(); ?> -->
+                </div>
+          </article>
+
     <?php endwhile; ?> 
       <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-          <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+          <div class="row col-lg-4">
+        
+                <div class="col-lg-12 col-centered ">
                   <hr>
               <nav>
-                <ul class="pager">
+               <ul class="pager">
                  <li class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'gents' ) ); ?></li>
                  <li class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'gents' ) ); ?></li>
                </ul><!-- end of .navigation -->
              </nav>
            </div>
-         </div>
+           </div>
        </div>
-           <?php endif; ?>
+       <?php endif; ?>
          <?php else : ?>
-         <article id="post-not-found" class="hentry clearfix">
-          <div class="container">
+          <article id="post-not-found" class="hentry clearfix">
+            <div class="row col-lg-4">
               <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-          <header>
-           <h1 class="title-404"><?php _e('404 &#8212; Fancy meeting you here!', 'gents'); ?></h1>
-         </header>
-         <section>
-           <p><?php _e('Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents'); ?></p>
-         </section>
-         <footer>
-           <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
-           <?php get_search_form(); ?>
-         </footer>
-         </div>
-         </div>
-       </div>
-       </article>
-     <?php endif; ?>  
+                <div class="col-lg-12">
+                  <header>
+                    <h1 class="title-404"><?php _e('404 &#8212; Opsy! :) Fancy meeting you here!', 'gents'); ?></h1>
+                  </header>
+                  <section>
+                     <p><?php _e('Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents'); ?></p>
+                  </section>
 
+                   <footer>
+                     <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
+                     <?php get_search_form(); ?>
+                   </footer>
+                 </div>
+                </div>
+            </div>
+          </article>
+</div> <!-- /col-lg-8 -->
+  
+  <?php endif; ?>  
 
-   </div> <!-- /col-lg-8 -->
-
-   <?php get_footer(); ?>
+  <?php get_footer(); ?>

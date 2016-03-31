@@ -14,7 +14,7 @@
  * @since          available since Release 1.0
  */
    ?>
-
+<!--
    <?php
    if(isset($_POST['submitted'])) {
     if(trim($_POST['contactName']) === '') {
@@ -62,7 +62,7 @@
 
 <?php get_header(); ?>
 
-
+-->
 <div class="container pt">
 
 
@@ -74,17 +74,17 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-                <div class="row mt">
+          <div class="row mt">
             <div class="col-lg-6 col-lg-offset-3 centered">
-
+<!-- 
                    <header>
             <h3><?php the_title(); ?></h3>
-          </header>
+          </header> -->
                 <hr>
                 <?php the_content(); ?>
             </div>
         </div>
-
+<!--
             <section class="post-entry">
 
                 <div class="row mt">    
@@ -145,7 +145,7 @@
                 </div>
         </div><!-- /row -->
 
-            </section><!-- end of .post-entry -->
+        <!--   </section><!-- end of .post-entry -->  
 
         </article><!-- end of #post-<?php the_ID(); ?> -->
 

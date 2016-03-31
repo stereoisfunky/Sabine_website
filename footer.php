@@ -22,7 +22,7 @@
 
   <!-- +++++ Footer Section +++++ -->
 <footer id="footer">
-<div class="container-footer">  <!-- changed from container to container-footer -->
+    <div class="container-footer">  <!-- changed from container to container-footer -->
       <div class="row">
         <div class="col-lg-12">
           <?php dynamic_sidebar('footer-left'); ?>
@@ -38,11 +38,10 @@
         <div class="col-lg-12">
           <?php dynamic_sidebar('footer-right'); ?>
         </div>
-      
       </div><!-- /row -->
     </div><!-- /container -->
+    <a href="http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png" class="topbutton"></a>
 </footer><!-- end #footer -->
-<a href="http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png" class="topbutton"></a>
 
 <?php wp_footer(); ?>
 

@@ -16,6 +16,14 @@
 <?php get_header(); ?>
 
 <div id="content">
+    
+    <ul>
+    <?php wp_list_categories( array(
+        'order' => 'DESC',
+        'parent' => 0,
+        'title_li' => " ", 
+        ) ); ?> 
+    </ul>
 
   <?php if ( have_posts() ) : ?>
 
@@ -23,10 +31,10 @@
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div id="white">
+    <div id="sinle_post_container">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
+          <div class="col-lg-10 col-lg-offset-2">
 
            <section class="post-meta">
             <p class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?><ba><?php the_author_meta( 'display_name' ); ?></ba></p>

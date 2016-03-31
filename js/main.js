@@ -16,33 +16,14 @@ jQuery(function(){
       //Data Tooltip
       jQuery("[data-toggle='tooltip']").tooltip();
 
-
-       jQuery('.blue').hoverZoom({
-                overlayColor: '#3498db',
-                zoom: 0
-            });
-            
             jQuery('.green').hoverZoom({
+                overlay: true,
                 overlayColor: '#00aa86',
-                zoom: 0
+                overlayOpacity: 0.5,
+                zoom: 0,
+                speed: 300
             });
             
-            jQuery('.pink').hoverZoom({
-                overlayColor: '#bd2e75',
-                zoom: 0
-            });
-            
-            jQuery('.black').hoverZoom({
-                overlayColor: '#2f2f2f',
-                zoom: 0
-            });
-            
-            jQuery('.alizarin').hoverZoom({
-                overlayColor: '#e74c3c',
-                zoom: 0
-            });
-  
-
 });
 
 jQuery(document).ready(function($){

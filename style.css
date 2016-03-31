@@ -76,22 +76,22 @@ a:after {
 	transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/*hr {
-	border: 0;
+hr {
+	border-style: none;
 	border-top: 1px solid #ccc;
 	display: block;
 	height: 1px;
 	margin: 1em 0;
 	padding: 0;
 }
-*/
+
 
 .navbar { margin-bottom: 0px; text-transform: uppercase; width: 100%;}
 
 .navbar-inverse { padding-bottom: 8px; padding-top: 8px; }
 
 /*background color of the nav bar*/
-.navbar-inverse { background-color: #ffffff; border: 0px;}
+.navbar-inverse { background-color: #ffffff; border-style: none;}
 
 /*color of nav elements e.g tabs*/
 .navbar-inverse .navbar-nav > li > a { color: #939598; }
@@ -102,7 +102,7 @@ a:after {
 
 .navbar-inverse .navbar-brand { color: white; }
 
-.navbar-inverse .navbar-toggle { border: 0px; }
+.navbar-inverse .navbar-toggle { border-style: none;}
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover { background-color: transparent; color: #00aa86; }
 
@@ -121,12 +121,14 @@ a:after {
 
 /* Button to go up reading*/
 .topbutton {
-	height:64px;
-	width:64px;
-	position:fixed;
-	right:25px;
-	bottom:25px;
-	z-index:1;
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 100px;
+	bottom: 80px;
 	background-image: url("http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png");
 	background-repeat:no-repeat;
 	display:none;
@@ -135,7 +137,7 @@ a:after {
 /* ================== BURGER MENU ANIMATION ================== */
 
 .navbar-toggle {
-  border: 0px;
+  border-style: none;
   background: transparent !important;
 }
 .navbar-toggle:hover {
@@ -189,7 +191,7 @@ a:after {
 
 }
 
-#footer{
+#footer{ 
 	background-color: #00aa86;
 	box-sizing: border-box;
 	width: 100%;
@@ -209,6 +211,7 @@ a:after {
 	color:  #ffffff;
 	margin-left: auto;
     margin-right: auto;
+
 }
 
 .footer-links a{
@@ -220,10 +223,13 @@ a:after {
 
 /* +++++ Color Wraps / Blog Page +++++ */
 
-#grey { background-color: #f2f2f2; padding-bottom: 60px; padding-top: 60px; }
-
-#white { background-color: #ffffff; padding-bottom: 60px; padding-top: 60px; }
-
+.container_posts { 
+	background-color: #ffffff; 
+	padding-bottom: 100px !important; 
+	padding-top: 100px !important; 
+	  min-height: 100%;
+  max-width: 100%;
+}
 
 
 /* Blog Date*/
@@ -261,14 +267,7 @@ bt { font-size: 12px; }
     background-image:url(images/zoom.png);
     background-repeat:no-repeat;
     background-position:center;
-}
 
-.zoom2 {
-	opacity: 1;
-}
-
-.zoom2:hover {
-	opacity: 0.7;
 }
 
 /* glyphicon Configuration */
@@ -329,14 +328,13 @@ margin: 0 auto;
  color: #00f7c2;
 }
 
-
-
 /* ================== CONCATC PAGE CSS ================== */
 .contacts p{
 	font-size:20px;
 	display:inline-block;
 	text-align: center !important;
-}
+	vertical-align: middle;
+	}
 
 
 /* ================== ABOUT ME PAGE CSS ================== */
@@ -350,26 +348,31 @@ margin: 0 auto;
 }
 
 /* ================== BLOG NAV CATEGORIES ================== */
-.cat-item {
+.cat-item{
 	font-size: 20px;
 	text-align: center;
 	height: 40px;
 	display: inline-block;
 	letter-spacing: 1px;
+	margin-left: 1.3em;
+	margin-right: 1.3em;
 }
 
 .categories {
 	position:fixed;
-	margin-top: 24px;
+	text-align: center;
+	margin-top: 60px;
 	width:100%;
-	z-index: 200;
+	z-index: 100;
 	background-color: #ffffff;
+	opacity: 0.96;
 } 
 
 .container-post {
  z-index: 100;
  padding-bottom: 60px;
  max-width: 80%;
+ text-align: center;
 }
 
 /* --------------------------------- */
@@ -385,17 +388,22 @@ margin: 0 auto;
 	h1, h2, h3, h4, h5, h6 {
     	font-size: 0.98em;
 	} 
+
 	/* items from the navigation are getting bigger and centered */
-	.menu-item a{
-		background-color: #f2f2f2 !important;
+	.menu-item{
+		opacity: 1;
 		font-size: 20px;
 		text-align: center;
 		height: 40px;
+		background-color: #eff5f4;
 	}
-	#menu-main-menu {
-		background-color:#f2f2f2;
-		height:100%;
+
+	/* erase the border given by the burger menu */
+	.navbar-collapse {
+		border-style: none !important;
 	}
+
+
 	/* logo has padding as much as the hamburger menu */
 	#logo {
 		padding-left: 25px;
@@ -403,6 +411,12 @@ margin: 0 auto;
 
 	#prev_project, #next_project{
 		display: none;
+	}
+
+	/* Button to go up reading*/
+	.topbutton {
+		right: 10px;
+		bottom: 80px;
 	}
 }
 

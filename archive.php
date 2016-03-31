@@ -15,13 +15,19 @@
  */
    ?>
    <?php get_header(); ?>
-
+    <ul>
+    <?php wp_list_categories( array(
+        'order' => 'DESC',
+        'parent' => 0,
+        'title_li' => " ", 
+        ) ); ?> 
+    </ul>
   <?php if (have_posts()) : ?>
 
   <?php while (have_posts()) : the_post(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-           <div id="<?php echo $color_id ?>">
+           <div id="diary_container">
             <div class="container">
               <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">             

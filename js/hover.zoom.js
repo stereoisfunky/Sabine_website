@@ -8,7 +8,7 @@
                 overlay: true,
                 overlayColor: '#00aa86',
                 overlayOpacity: 0.9,
-                zoom: 25,
+                zoom: 0,
                 speed: 300
             };
              
