@@ -22,28 +22,20 @@
         'title_li' => " ", 
         ) ); ?> 
     </ul>
-  <?php if (have_posts()) : ?>
 
+  <?php if (have_posts()) : ?>
+<div class="container_posts col-xs-12">
   <?php while (have_posts()) : the_post(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-           <div id="diary_container">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">             
-                  </section><!-- end of .post-meta -->
-                  <header>  
-                  </header>
-                  <section class="post-entry">
-                    
+  
+          <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin:0px">
+                <div class="col-lg-10 col-centered">
                   <?php the_content(); ?>
-                  </section><!-- end of .post-entry -->   
                 </div>
-              </div><!-- /row -->
-            </div> <!-- /container -->
-          </div> 
-      </article><!-- end of #post-<?php the_ID(); ?> -->
-              <?php endwhile; ?> 
+          </article>
+
+          <?php endwhile; ?> 
 
               <?php if (  $wp_query->max_num_pages > 1 ) : ?>
               <div class="container">

@@ -32,8 +32,8 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <div id="sinle_post_container">
-      <div class="container">
-        <div class="row">
+      <div class="container pt">
+        <div class="row pt">
           <div class="col-lg-10 col-lg-offset-2">
 
            <section class="post-meta">

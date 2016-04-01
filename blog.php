@@ -48,7 +48,7 @@
   <?php while (have_posts()) : the_post(); ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <div class="row col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin:0px">
-                <div class="col-lg-12 col-centered ">
+                <div class="col-lg-12 col-centered">
                   <?php the_content(); ?>
                 </div>
           </article>

@@ -23,23 +23,25 @@
   <!-- +++++ Footer Section +++++ -->
 <footer id="footer">
     <div class="container-footer">  <!-- changed from container to container-footer -->
-      <div class="row">
-        <div class="col-lg-12">
-          <?php dynamic_sidebar('footer-left'); ?>
-        </div>
-        <div class="col-lg-12">
-          <div class="footer-links">
-            <a href="https://www.behance.net/zoltnere" target="_blank"><i class="fa fa-behance fa-lg fa-fw"></i></a>
-            <a href="https://lv.linkedin.com/in/sabīne-zoltnere-b17ba153" target="_blank"><i class="fa fa-linkedin fa-lg fa-fw"></i></a>
-            <a href="https://www.facebook.com/sabine.zoltnere" target="_blank"><i class="fa fa-facebook fa-lg fa-fw"></i></a>
-          </div>
-          <?php dynamic_sidebar('footer-middle'); ?>
-        </div>
-        <div class="col-lg-12">
-          <?php dynamic_sidebar('footer-right'); ?>
-        </div>
-      </div><!-- /row -->
-    </div><!-- /container -->
+
+      <?php dynamic_sidebar('footer-left'); ?>
+
+        <div class="footer-links">
+          <a href="https://www.behance.net/zoltnere" target="_blank"><i class="fa fa-behance fa-lg fa-fw"></i></a>
+          <a href="https://lv.linkedin.com/in/sabīne-zoltnere-b17ba153" target="_blank"><i class="fa fa-linkedin fa-lg fa-fw"></i></a>
+          <a href="https://www.facebook.com/sabine.zoltnere" target="_blank"><i class="fa fa-facebook fa-lg fa-fw"></i></a>
+       </div>
+
+        
+    <div>
+        <?php dynamic_sidebar('footer-middle'); ?>
+    </div>
+          
+    <div>
+         <?php dynamic_sidebar('footer-right'); ?>
+    </div>
+  </div>
+    
     <a href="http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png" class="topbutton"></a>
 </footer><!-- end #footer -->
 

@@ -18,7 +18,7 @@ jQuery(function(){
 
             jQuery('.green').hoverZoom({
                 overlay: true,
-                overlayColor: '#00aa86',
+                overlayColor: '#000000',
                 overlayOpacity: 0.5,
                 zoom: 0,
                 speed: 300
@@ -26,8 +26,20 @@ jQuery(function(){
             
 });
 
+jQuery("#menu-item").click(function() {
+  jQuery('.green').hoverZoom({
+                overlay: true,
+                overlayColor: '#000000',
+                overlayOpacity: 0.5,
+                zoom: 0,
+                speed: 300
+            });
+});
+
+
+
 jQuery(document).ready(function($){
-    var offset = 100;
+    var offset = 500;
     var speed = 250;
     var duration = 500;
      $(window).scroll(function(){

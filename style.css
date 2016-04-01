@@ -6,7 +6,6 @@ Description: Responsive WordPress theme with all the Twitter Bootstrap elements 
 Author: Brad Williams & Carlos Alvarez & Carlos Alvarez
 Author URI: http://gentsthemes.com
 Version: 3.0.3
-Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, bootstrap, twitter
 
 Copyright (C) 2011-2014 Gents Themes
 License: GNU General Public License, version 3 (GPLv3)
@@ -16,9 +15,13 @@ CREATE CHILD THEME.
 See: http://codex.wordpress.org/Child_Themes
 	
 CSS Rules: Sorted alphabetically for better organization.
+
+
+Theme has been modified by stereoisfunky to adapt UI and UX
+
 */
 
-/* Add my personal font */
+/* ================== GENERAL ================== */
 
 html {
   position: relative;
@@ -27,6 +30,7 @@ html {
   overflow-x: hidden !important;
 }
 
+/* General - Font chosen Futura */
 body {
 	-webkit-overflow-scrolling: touch;
 	-webkit-font-smoothing: antialiased;
@@ -36,24 +40,24 @@ body {
 	text-align: justify;
 	font-size: 16px;
 	font-weight: 100;
-	margin-bottom: 10px;
+	padding-bottom: 50px;
 	z-index: 1;
 }
 
-/* Titles */
+
+/* ================== TITLES and PARAGRAPH ================== */
+
+/* Font weight is low to give a more lighter look to the font */
 h1, h2, h3, h4, h5, h6 { color: #00aa86; font-family: 'Futura', sans-serif; font-weight: 10; }
 
+/* Main titles H1 should have some margin */
 h1 { font-size: 35px; margin-bottom: 30px; margin-top: 30px; }
-
-/*.author-avatar img { -webkit-border-radius: 95px; -moz-border-radius: 95px; border-radius: 95px; }*/
-
 
 /* Paragraph & Typographic */
 p { font-size: 16px; line-height: 1.5; margin-bottom: 25px; text-align: justify;}
 
-.centered { text-align: center; }
 
-/* Links */
+/* Style for Links */
 a {
 	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
 	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -76,6 +80,8 @@ a:after {
 	transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
+/* Style for line break Used in Contacts */
+
 hr {
 	border-style: none;
 	border-top: 1px solid #ccc;
@@ -86,6 +92,8 @@ hr {
 }
 
 
+/* ================== NAVIGATION - TABS ================== */
+
 .navbar { margin-bottom: 0px; text-transform: uppercase; width: 100%;}
 
 .navbar-inverse { padding-bottom: 8px; padding-top: 8px; }
@@ -93,7 +101,7 @@ hr {
 /*background color of the nav bar*/
 .navbar-inverse { background-color: #ffffff; border-style: none;}
 
-/*color of nav elements e.g tabs*/
+/*color of nav */
 .navbar-inverse .navbar-nav > li > a { color: #939598; }
 
 .navbar-inverse .navbar-nav > li > a:hover { color: #00f7c2; }
@@ -108,34 +116,16 @@ hr {
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { background-color: transparent; color: #00aa86; }
 
-/* Color of Sabine Zoltnere name in the banner */
+/* Sabine Zoltnere name in the banner */
 #logo span {
  padding-left: 5px;
  color: #00aa86;
  text-transform: uppercase; 
 }
 
-/* progress bar skills */
-.progress-bar-theme { background-color: #d3d3d3; }
+/* ================== BURGER MENU (Bm) ANIMATION ================== */
 
-
-/* Button to go up reading*/
-.topbutton {
-	display: none;
-	width: 60px;
-	height: 60px;
-	text-indent: -9999px;
-	position: fixed;
-	z-index: 999;
-	right: 100px;
-	bottom: 80px;
-	background-image: url("http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png");
-	background-repeat:no-repeat;
-	display:none;
-}
-
-/* ================== BURGER MENU ANIMATION ================== */
-
+/* Please Bm transparent background */
 .navbar-toggle {
   border-style: none;
   background: transparent !important;
@@ -143,11 +133,14 @@ hr {
 .navbar-toggle:hover {
   background: transparent !important;
 }
+/*  General styling for the bars of the Bm*/
 .navbar-toggle .icon-bar {
   width: 22px;
   transition: all 0.2s;
-    background-color: #939598 !important;
+  background-color: #939598 !important;
 }
+
+/* animation of the Bm from 3 lines to X */
 .navbar-toggle .top-bar {
   transform: rotate(45deg);
   transform-origin: 10% 10%;
@@ -169,24 +162,27 @@ hr {
   transform: rotate(0);
 }
 
-/* ================== - ================== */
+
+/* ================== WRAP SECTIONS ================== */
+
+#ww { background-color: #ffffff; padding-bottom: 30px; padding-top: 80px; max-width: 100%;}
 
 /* Helpers */
 
-.mt { margin-bottom: 40px; margin-top: 40px; }
+.mt { margin-bottom: 80px; padding-top: 50px; }
 
-.pt { padding-bottom: 50px; padding-top: 50px; max-width: 100%;}
+.pt { padding-bottom: 80px; padding-top: 10px; max-width: 100%;}
 
-/* +++++ WRAP SECTIONS +++++ */
 
-#ww { background-color: #ffffff; padding-bottom: 10px; padding-top: 80px; max-width: 100%;}
+
+/* ================== FOOTER ================== */
 
 #footer p { color: white; }
 
 #footer h4 { 
 	color: white; 
 	text-transform: uppercase;
-	text-align: center;
+	text-align: middle;
 	font-size: 14px;
 
 }
@@ -194,46 +190,41 @@ hr {
 #footer{ 
 	background-color: #00aa86;
 	box-sizing: border-box;
-	width: 100%;
 	text-align: center;
 	position: absolute;
   	bottom: 0;
   	width: 100%;
   	/* Set the fixed height of the footer here */
-  	height: 100px;
+  	height: 180px;
 }
 
-/* Footer links */
+/* Footer links // text on footer */
 
 .footer-links{
 	font-size:14px;
 	font-weight: bold;
 	color:  #ffffff;
-	margin-left: auto;
-    margin-right: auto;
-
+	padding-top: 60px;
 }
 
 .footer-links a{
-	padding-top: 20px;
 	display:inline-block;
 	text-decoration: none;
 	color:  inherit;
 }
 
-/* +++++ Color Wraps / Blog Page +++++ */
-
+/* ================== BLOG PAGE  ================== */
+/* this is the div that contains all the post in the diary page */
 .container_posts { 
 	background-color: #ffffff; 
-	padding-bottom: 100px !important; 
+	padding-bottom: 120px !important; 
 	padding-top: 100px !important; 
-	  min-height: 100%;
-  max-width: 100%;
+	min-height: 100%;
+  	max-width: 100%;
 }
 
-
 /* Blog Date*/
-bd {
+/*bd {
 	color: #d2d2d2;
 	font-size: 12px;
 	font-weight: 700;
@@ -241,13 +232,14 @@ bd {
 }
 
 /* Blog Author*/
-ba { font-size: 12px; padding-left: 5px; text-transform: uppercase; }
+/*ba { font-size: 12px; padding-left: 5px; text-transform: uppercase; }
 
 /* Blog Quote */
-.bq { font-size: 22px; padding-top: 30px; }
+/*.bq { font-size: 22px; padding-top: 30px; }
 
 /* Blog Tags */
-bt { font-size: 12px; }
+/*bt { font-size: 12px; }
+
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
@@ -271,18 +263,14 @@ bt { font-size: 12px; }
 }
 
 /* glyphicon Configuration */
-
 .glyphicon { color:  #ffff1a; font-size: 40px; }
 
-/* WP User Avatar */
 
-.wp-user-avatar {margin: 0;}
-
-
-/* LANDING PAGE STYLING */
+/* ================== LANDING PAGE STYLING ================== */
 
 .fullscreen-landing {
-	z-index: 10000;
+	/* nav bar is 1030*/
+	z-index: 1031;
 	background-image: url('http://localhost:8888/Wordpress/wp-content/uploads/2016/03/AtmosphereWeb2-2.jpg');
 	background-size: cover;
 	background-position: center center;
@@ -295,19 +283,22 @@ bt { font-size: 12px; }
 
 }
 
+ /* needed to center the logo in the middle of the page or as wanted */
 .fullscreen-landing img{
   position: fixed;
   top: 40%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
-
 
 .portfolio-thumbnail {
 	padding: 10px 10px 10px 10px;
 }
 
+
+/* ================== PORTFOLIO ================== */
+
+ /* container portfolio*/
 .full-width-fixed {
 	width: 100%;
 	margin-top: 71px;
@@ -315,10 +306,11 @@ bt { font-size: 12px; }
 
 /* 11 Columns width and centered - Single Portfolio */
 .col-centered{
-float: none;
-margin: 0 auto;
+	float: none;
+	margin: 0 auto;
 }
 
+/* Tab to switch between portfolio projects*/
 #prev_project, #next_project{	
  font-size: 14px;
  color: #939598;
@@ -349,31 +341,57 @@ margin: 0 auto;
 
 /* ================== BLOG NAV CATEGORIES ================== */
 .cat-item{
-	font-size: 20px;
+	font-size: 16px;
 	text-align: center;
-	height: 40px;
+	height: 20px;
 	display: inline-block;
 	letter-spacing: 1px;
 	margin-left: 1.3em;
 	margin-right: 1.3em;
 }
-
+.categories ul{
+	padding-top: 5px;
+}
 .categories {
 	position:fixed;
 	text-align: center;
 	margin-top: 60px;
 	width:100%;
-	z-index: 100;
+	z-index: 3;
 	background-color: #ffffff;
 	opacity: 0.96;
 } 
 
 .container-post {
- z-index: 100;
+ z-index: 2;
  padding-bottom: 60px;
  max-width: 80%;
  text-align: center;
 }
+
+
+/* progress bar skills */
+.progress-bar-theme { background-color: #d3d3d3; }
+
+/* General Class used to align text within columns */
+.centered { text-align: center; }
+
+
+/* Scroll up button*/
+.topbutton {
+	display: none;
+	width: 32px;
+	height: 32px;
+	text-indent: center;
+	position: fixed;
+	z-index: 5;
+	right: 30px;
+	bottom: 90px;
+	background-image: url("http://localhost:8888/Wordpress/wp-content/uploads/2016/03/toTopButton-1.png");
+	background-repeat:no-repeat;
+	display:none;
+}
+
 
 /* --------------------------------- */
 /* Adjustment for the mobile version */
@@ -415,18 +433,33 @@ margin: 0 auto;
 
 	/* Button to go up reading*/
 	.topbutton {
-		right: 10px;
-		bottom: 80px;
+		right: 13px;
+		bottom: 132px;
 	}
-}
 
+	#footer{ 
+	  	/* Height of the footer is smaller in mobile */
+	  	height: 130px;
+	}
+	.footer-links{
+		font-size:14px;
+		font-weight: bold;
+		color:  #ffffff;
+		padding-top: 40px;
+	}
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
+	/* Helpers */
 
-}
+	.pt { 
+		padding-bottom: 30px; 
+		padding-top: 10px; 
+		max-width: 100%;}
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {
-
+	/* Paragraph & Typographic */
+	p { 
+		font-size: 18px;
+		line-height: auto; 
+		margin-bottom: 25px; 
+		text-align: justify;
+	}
 }
