@@ -66,7 +66,7 @@
 
            <?php if( bi_get_data('custom_logo') !== '' ) { ?>
             <div id="logo">
-              <a href="<?php echo home_url(); ?>/" title="<?php bloginfo( 'name' ); ?>" rel="home">
+              <a href="<?php echo home_url('projects'); ?>/" title="<?php bloginfo( 'name' ); ?>" rel="home">
                 <img src="<?php echo bi_get_data('custom_logo'); ?>" alt="<?php bloginfo( 'name' ) ?>" /> <span>  SABĪNE  ZOLTNERE</span>
               </a>
             </div>

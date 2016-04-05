@@ -1,8 +1,10 @@
 /*!
- * JS Scripts
+ * All the javascript functions
  */
-// Placeholder
-jQuery(function(){
+
+
+/*  Hover - Effect on portfolio homepage  */
+jQuery(document).ready(function($){
 
       //Shortcode Popover
      jQuery("a[rel=popover]").popover()
@@ -22,39 +24,53 @@ jQuery(function(){
                 overlayOpacity: 0.5,
                 zoom: 0,
                 speed: 300
-            });
-            
+            });     
 });
 
+/*  Force reload function of hover when clicking in any element of the menu */
 jQuery("#menu-item").click(function() {
-  jQuery('.green').hoverZoom({
-                overlay: true,
-                overlayColor: '#000000',
-                overlayOpacity: 0.5,
-                zoom: 0,
-                speed: 300
-            });
+  jQuery('.green').hoverZoom();
+});
+
+jQuery("#logo").click(function() {
+  jQuery('.green').hoverZoom();
 });
 
 
+
+/*  Button for scrolling bottom to top Content in pages which are long */
 
 jQuery(document).ready(function($){
-    var offset = 500;
-    var speed = 250;
-    var duration = 500;
-     $(window).scroll(function(){
+    var offset = 500; //Pixel needed before button shows up
+    var speed = 250;  //Speed in which button shows up
+    var duration = 500; //Speed in which scroll to up happens
+     jQuery(window).scroll(function(){
             if ($(this).scrollTop() < offset) {
-           $('.topbutton') .fadeOut(duration);
+           jQuery('.topbutton') .fadeOut(duration);
             } else {
-           $('.topbutton') .fadeIn(duration);
+           jQuery('.topbutton') .fadeIn(duration);
             }
         });
   $('.topbutton').on('click', function(){
-    $('html, body').animate({scrollTop:0}, speed);
+    jQuery('html, body').animate({scrollTop:0}, speed);
     return false;
     });
 });
-// jQuery(document).ready(function() {  
-//   //jQuery('.fullscreen-landing').width(window.innerWidth);
-//   //jQuery('.fullscreen-landing').height(window.innerHeight);
-// });
+
+/*  Change Picture landing page everyloading */
+jQuery(document).ready(function($){
+  var images = [
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/AtmosphereWeb2-2.jpg",
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/AtmosphereWeb11-2.jpg",
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/10.jpg",
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/14.jpg",];
+
+  function landingImg() {
+      var size = images.length
+      var x = Math.floor(size * Math.random())
+      $('#landPicBackground').attr('src', images[x]);
+  }
+
+  landingImg();
+
+});
