@@ -41,7 +41,7 @@ jQuery("#logo").click(function() {
 /*  Button for scrolling bottom to top Content in pages which are long */
 
 jQuery(document).ready(function($){
-    var offset = 500; //Pixel needed before button shows up
+    var offset = 1400; //Pixel needed before button shows up
     var speed = 250;  //Speed in which button shows up
     var duration = 500; //Speed in which scroll to up happens
      jQuery(window).scroll(function(){
@@ -60,10 +60,9 @@ jQuery(document).ready(function($){
 /*  Change Picture landing page everyloading */
 jQuery(document).ready(function($){
   var images = [
-      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/AtmosphereWeb2-2.jpg",
-      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/AtmosphereWeb11-2.jpg",
-      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/10.jpg",
-      "http://localhost:8888/Wordpress/wp-content/uploads/2016/03/14.jpg",];
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/04/©Sabine_Zoltnere_2016_Landing.jpg",
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/04/©Sabine_Zoltnere_2016_8.jpg",
+      "http://localhost:8888/Wordpress/wp-content/uploads/2016/04/©Sabine_Zoltnere_2016_7.jpg",];
 
   function landingImg() {
       var size = images.length

@@ -13,6 +13,9 @@
  * @link           http://codex.wordpress.org/Templates
  * @since          available since Release 1.0
  */
+
+
+
    ?>
    <?php get_header(); ?>
     <ul>
@@ -23,6 +26,9 @@
         ) ); ?> 
     </ul>
 
+
+  <!--  THIS IS THE PAGE WITH ALL THE POSTS COMING FROM THE SAME CATEGORY -->   
+
   <?php if (have_posts()) : ?>
 <div class="container_posts col-xs-12">
   <?php while (have_posts()) : the_post(); ?>
@@ -30,7 +36,7 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   
           <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin:0px">
-                <div class="col-lg-10 col-centered">
+                <div class="col-lg-9 col-centered">
                   <?php the_content(); ?>
                 </div>
           </article>

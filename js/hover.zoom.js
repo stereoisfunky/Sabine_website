@@ -38,9 +38,9 @@
                         $(this).parent().css('background-image', 'none');
                         hz.hover(function() {
                             $('img', this).stop().animate({
-                                height: height + s.zoom,
+/*                                height: height + s.zoom,
                                 marginLeft: -(s.zoom),
-                                marginTop: -(s.zoom)
+                                marginTop: -(s.zoom)*/
                             }, s.speed);
                             if(s.overlay === true) {
                                 $(this).parent().find('.zoomOverlay').stop().animate({
@@ -49,9 +49,9 @@
                             }
                         }, function() {
                             $('img', this).stop().animate({
-                                height: height,
+/*                                height: height,
                                 marginLeft: 0,
-                                marginTop: 0
+                                marginTop: 0*/
                             }, s.speed);
                             if(s.overlay === true) {
                                 $(this).parent().find('.zoomOverlay').stop().animate({

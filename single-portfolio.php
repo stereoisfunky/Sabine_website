@@ -32,22 +32,21 @@
             <div class="row">
 
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-              <h3 class="text-center" size="3">
-               <?php previous_post_link('%link','<img src="http://localhost:8888/Wordpress/wp-content/uploads/2016/03/ic_previous.png"/><span id="prev_project">Previous Project</span>', FALSE); ?>
-               </h3>
+              <h4 class="text-center">
+               <?php previous_post_link('%link','<i class="fa fa-angle-left"></i> <span id="prev_project">Previous Project</span> ', FALSE); ?>
+               </h4>
               </div>
 
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <h3 class="text-center">
+                <h4 class="text-center">
                   <?php echo rwmb_meta( 'wtf_portfolio_top_title' ); ?>
-                </h3>
+                </h4>
               </div>
 
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <h3 class="text-center">
-                 <?php next_post_link('%link','<span id="next_project">Next Project</span> <img src="http://localhost:8888/Wordpress/wp-content/uploads/2016/03/ic_next.png"/>', FALSE); ?>
-                </h3>
-
+                <h4 class="text-center">
+                 <?php next_post_link('%link','<span id="next_project">Next Project</span> <i class="fa fa-angle-right"></i>', FALSE); ?>
+                </h4>
               </div>
             </div>
           </div>

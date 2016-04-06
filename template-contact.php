@@ -80,7 +80,7 @@
                    <header>
             <h3><?php the_title(); ?></h3>
           </header> -->
-                <hr>
+                
                 <?php the_content(); ?>
             </div>
         </div>

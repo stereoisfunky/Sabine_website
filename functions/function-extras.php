@@ -35,13 +35,13 @@ function bootstrap_styles()
 add_action( 'wp_enqueue_scripts', 'bootstrap_styles' );
 
 
-  function load_fonts() {
+  /*function load_fonts() {
             wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
             wp_enqueue_style( 'googleFonts');
         }
  
     add_action('wp_print_styles', 'load_fonts');
-
+*/
 
 ?>
 <?php
