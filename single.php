@@ -36,23 +36,23 @@
         <div class="row pt">
           <div class="col-lg-10 col-lg-offset-2">
 
-           <section class="post-meta">
+           <!-- <section class="post-meta">
             <p class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?><ba><?php the_author_meta( 'display_name' ); ?></ba></p>
             <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>
           </section><!-- end of .post-meta -->
 
-          <h4><?php the_title(); ?></h4>
+        <!--   <h4><?php the_title(); ?></h4>
 
 
           <?php if ( has_post_thumbnail() ) : ?>
 
           <p><?php the_post_thumbnail(); ?></p>
         <?php endif; ?>
-
+ -->
         <section class="post-entry">
           <?php the_content(); ?>
 
-          <?php if ( get_the_author_meta( 'description' ) != '' ) : ?>
+  <!--         <?php if ( get_the_author_meta( 'description' ) != '' ) : ?>
 
           <div id="author-meta">
             <?php if ( function_exists( 'get_avatar' ) ) { echo get_avatar( get_the_author_meta( 'email' ), '80' ); }?>

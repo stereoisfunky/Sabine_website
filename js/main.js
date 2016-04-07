@@ -73,3 +73,25 @@ jQuery(document).ready(function($){
   landingImg();
 
 });
+
+
+
+jQuery(document).ready(function(){
+  jQuery( ".single_post_grid p" ).toggle(function() {
+  var offset = jQuery(this).offset();
+  console.log(offset);
+  jQuery( this ).css({
+      "height": "190%",
+      "width": "190%",
+      "object-fit":"cover",
+      "z-index":"10",
+    });
+}, function() {
+  jQuery( this ).css({
+      "width": "100%",
+      "height": "100%",
+      "z-index":"5",
+    });
+  });
+});
+
