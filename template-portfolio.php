@@ -30,7 +30,7 @@
 
     <div class="col-lg-6 portfolio-thumbnail">
      <?php if ( has_post_thumbnail()) : ?>
-     <a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+     <a class="" href="<?php the_permalink(); ?>">
       <?php the_post_thumbnail(); ?>
       <p class="thumb-title"><?php the_title_attribute(); ?></p>
     </a>

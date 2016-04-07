@@ -192,6 +192,8 @@ a:after {
 
 }
 
+/* wrapper 180 PX TO BOTTOM ANC CHECK MOBILE*/
+
 #footer{ 
 	background-color: transparent;
 	box-sizing: border-box;
@@ -234,23 +236,6 @@ a:after {
 }
 
 
-/* Blog Date*/
-/*bd {
-	color: #d2d2d2;
-	font-size: 12px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
-/* Blog Author*/
-/*ba { font-size: 12px; padding-left: 5px; text-transform: uppercase; }
-
-/* Blog Quote */
-/*.bq { font-size: 22px; padding-top: 30px; }
-
-/* Blog Tags */
-/*bt { font-size: 12px; }
-
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 
@@ -258,10 +243,10 @@ a:after {
 .glyphicon { color:  #ffff1a; font-size: 40px; }
 
 .portfolio-thumbnail {
-	opacity: 0.5;
+	opacity: 1;
 }
 .portfolio-thumbnail:hover {
-	opacity: 1;
+	opacity: 0.7;
 	-webkit-transition: opacity 0.5s; /* Safari */
     transition: opacity 0.5s;
 
@@ -275,9 +260,12 @@ a:after {
 
 .portfolio-thumbnail a p.thumb-title {
 	opacity: 0;
-	margin-top: -30%;
 	text-align: center;
-	color:white;
+	color: white;
+	position: absolute; 
+    top: 50%; 
+    left: 0; 
+    width: 100%; 
 }
 
 
@@ -391,7 +379,7 @@ a:after {
 
 }
 #about-me-downloads{
-	padding-top: 40px;
+	padding-top: 25px;
     text-align:center;
 }
 

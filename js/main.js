@@ -1,10 +1,8 @@
 /*!
  * All the javascript functions
  */
-
-
+ 
 /*  Button for scrolling bottom to top Content in pages which are long */
-
 jQuery(document).ready(function($){
     var offset = 1400; //Pixel needed before button shows up
     var speed = 250;  //Speed in which button shows up
@@ -40,7 +38,7 @@ jQuery(document).ready(function($){
 });
 
 
-
+/*  Function to enlarge single post on diary and center scroll on top */
 jQuery(document).ready(function($){
 
   $( ".diary-post-container").click(function(event) {

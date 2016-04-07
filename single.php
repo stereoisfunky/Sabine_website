@@ -35,43 +35,21 @@
       <div class="container pt">
         <div class="row pt">
           <div class="col-lg-10 col-lg-offset-2">
+            <section class="post-entry">
+              <?php the_content(); ?>
 
-           <!-- <section class="post-meta">
-            <p class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?><ba><?php the_author_meta( 'display_name' ); ?></ba></p>
-            <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>
-          </section><!-- end of .post-meta -->
-
-        <!--   <h4><?php the_title(); ?></h4>
+              <?php endif; // no description, no author's meta ?>
 
 
-          <?php if ( has_post_thumbnail() ) : ?>
-
-          <p><?php the_post_thumbnail(); ?></p>
-        <?php endif; ?>
- -->
-        <section class="post-entry">
-          <?php the_content(); ?>
-
-  <!--         <?php if ( get_the_author_meta( 'description' ) != '' ) : ?>
-
-          <div id="author-meta">
-            <?php if ( function_exists( 'get_avatar' ) ) { echo get_avatar( get_the_author_meta( 'email' ), '80' ); }?>
-            <div class="about-author"><?php _e( 'About', 'gents' ); ?> <?php the_author_posts_link(); ?></div>
-            <p><?php the_author_meta( 'description' ) ?></p>
-          </div><!-- end of #author-meta -->
-
-        <?php endif; // no description, no author's meta ?>
-
-
-              <?php custom_link_pages( array(
-          'before' => '<nav class="pagination"><ul>' . __( '' ),
-          'after' => '</ul></nav>',
-          'next_or_number' => 'next_and_number', // activate parameter overloading
-          'nextpagelink' => __( '&rarr;' ),
-          'previouspagelink' => __( '&larr;' ),
-          'pagelink' => '%',
-          'echo' => 1 )
-      ); ?>
+                    <?php custom_link_pages( array(
+                'before' => '<nav class="pagination"><ul>' . __( '' ),
+                'after' => '</ul></nav>',
+                'next_or_number' => 'next_and_number', // activate parameter overloading
+                'nextpagelink' => __( '&rarr;' ),
+                'previouspagelink' => __( '&larr;' ),
+                'pagelink' => '%',
+                'echo' => 1 )
+            ); ?>
 
 
                           </section><!-- end of .post-entry -->
