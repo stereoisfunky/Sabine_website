@@ -3,7 +3,6 @@ function bootstrap_scripts()
 {
 	// Register the scripts for this theme:
 	wp_register_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ) );
-	wp_register_script( 'hover-script', get_template_directory_uri() . '/js/hover.zoom.js', array( 'jquery' ) );
 	wp_register_script( 'main-script', get_template_directory_uri() . '/js/main.js', array( 'jquery' ) );
 
 	//  enqueue the script:

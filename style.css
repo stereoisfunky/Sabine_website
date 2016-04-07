@@ -253,28 +253,33 @@ a:after {
 
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
-/* Effects also are controled by hover.zoom.js */
-.zoom { 
-    display:block; 
-    position:relative; 
-    overflow:hidden; 
-    background:transparent url(images/loader.gif) no-repeat center;
-}
-
-
-.zoomOverlay {
-    position:absolute;
-    top:0; left:0;
-    bottom:0; right:0;
-    display:none;
-    background-image:url(images/zoom.png);
-    background-repeat:no-repeat;
-    background-position:center;
-
-}
 
 /* glyphicon Configuration */
 .glyphicon { color:  #ffff1a; font-size: 40px; }
+
+.portfolio-thumbnail {
+	opacity: 0.5;
+}
+.portfolio-thumbnail:hover {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s; /* Safari */
+    transition: opacity 0.5s;
+
+}
+
+.portfolio-thumbnail:hover a p.thumb-title {
+	opacity: 1;
+	-webkit-transition: opacity 1.5s; /* Safari */
+    transition: opacity 1.5s;
+}
+
+.portfolio-thumbnail a p.thumb-title {
+	opacity: 0;
+	margin-top: -30%;
+	text-align: center;
+	color:white;
+}
+
 
 
 /* ================== LANDING PAGE STYLING ================== */

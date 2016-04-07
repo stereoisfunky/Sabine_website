@@ -30,8 +30,9 @@
 
     <div class="col-lg-6 portfolio-thumbnail">
      <?php if ( has_post_thumbnail()) : ?>
-     <a class="zoom green" href="<?php the_permalink(); ?>" ata-toggle="tooltip" data-placement="top" title="<?php the_title_attribute(); ?>" >
+     <a class="" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
       <?php the_post_thumbnail(); ?>
+      <p class="thumb-title"><?php the_title_attribute(); ?></p>
     </a>
   <?php endif; ?>
   

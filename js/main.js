@@ -3,41 +3,6 @@
  */
 
 
-/*  Hover - Effect on portfolio homepage  */
-jQuery(document).ready(function($){
-
-      //Shortcode Popover
-     jQuery("a[rel=popover]").popover()
-      .click(function(e) {
-        e.preventDefault()
-      });
-
-      //Shortcode Tooltip
-      jQuery("a[rel=tooltip]").tooltip();
-
-      //Data Tooltip
-      jQuery("[data-toggle='tooltip']").tooltip();
-
-            jQuery('.green').hoverZoom({
-                overlay: true,
-                overlayColor: '#000000',
-                overlayOpacity: 0.5,
-                zoom: 0,
-                speed: 300
-            });     
-});
-
-/*  Force reload function of hover when clicking in any element of the menu */
-jQuery("#menu-item").click(function() {
-  jQuery('.green').hoverZoom();
-});
-
-jQuery("#logo").click(function() {
-  jQuery('.green').hoverZoom();
-});
-
-
-
 /*  Button for scrolling bottom to top Content in pages which are long */
 
 jQuery(document).ready(function($){
@@ -90,4 +55,3 @@ jQuery(document).ready(function($){
     $('html, body').animate({scrollTop: offset}, 500);
   });
 });
-
