@@ -76,22 +76,18 @@ jQuery(document).ready(function($){
 
 
 
-jQuery(document).ready(function(){
-  jQuery( ".single_post_grid p" ).toggle(function() {
-  var offset = jQuery(this).offset();
-  console.log(offset);
-  jQuery( this ).css({
-      "height": "190%",
-      "width": "190%",
-      "object-fit":"cover",
-      "z-index":"10",
-    });
-}, function() {
-  jQuery( this ).css({
-      "width": "100%",
-      "height": "100%",
-      "z-index":"5",
-    });
+jQuery(document).ready(function($){
+
+  $( ".diary-post-container").click(function(event) {
+    var allPics = $(".diary-post-container");
+    for (var i  in allPics) {
+      if (allPics[i].id != $(this).attr('id')) {
+        $('#' + allPics[i].id).removeClass('full-width-content');
+      }
+    }
+    $(this).toggleClass('full-width-content');
+    var offset = jQuery(this).offset().top - 107;
+    $('html, body').animate({scrollTop: offset}, 500);
   });
 });
 
